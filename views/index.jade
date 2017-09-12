@@ -1,0 +1,14 @@
+doctype html
+html(lang='en',ng-app='polls')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width,initial-scale=1, user-scalable=no')
+    title= title
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+      div.navbar-header
+        a.navbar-brand(href='#/polls')= title
+    div.container
+      div

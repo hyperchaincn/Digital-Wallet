@@ -1,0 +1,55 @@
+<div class="modal-header">
+    <h3 class="modal-title">资产交易</h3>
+</div>
+
+<div class="modal-body detail-modal">
+    <div class = "row my-row">
+        <div class = "col-md-2 ">
+            <span>资产名称</span>
+        </div>
+        <div class = "col-md-2 ">
+            <span>{{transfer.name}}</span>
+        </div>
+    </div>
+
+    <div class = "row my-row">
+        <div class = "col-md-2 ">
+            <span>对方帐号</span>
+        </div>
+        <div class = "col-md-2 ">
+            <span>{{transfer.other-account}}</span>
+        </div>
+    </div>
+
+    <div class = "row my-row">
+        <div class = "col-md-2 ">
+            <span>对方地址</span>
+        </div>
+        <div class = "col-md-2 ">
+            <span>{{transfer.other-addr}}</span>
+        </div>
+    </div>
+
+    <div class = "row my-row row-bottom">
+        <div class = "col-md-2 ">
+            <span>转出资产数目</span>
+        </div>
+        <div class = "col-md-2 ">
+            <span>{{transfer.count}}</span>
+        </div>
+    </div>
+
+    <form name="pwdForm" method="post" ng-submit="ok()" class="row my-row" style="padding-top: 30px;">
+        <span name="assetUnit" class="col-md-2">资产管理密码</span>
+        <div class="form-group col-md-3">
+            <input type="password" class="form-control" style="border-radius: 0; -webkit-appearance:button" placeholder="即登录密码" required="required" ng-model="pwdForm.password">
+        </div>
+        <div class="has-error">
+            <span class="help-block" ng-show="pwdForm.error">{{pwdForm.error}}</span>
+        </div>
+    </div>
+</form>
+
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="ok()">确定</button>
+</div>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="136" height="32" viewBox="0 0 136 32">
+    <g fill="#FFF" fill-rule="evenodd">
+        <path d="M9.982 9.667L7.04 12.58v6l12.558 12.435L27 27.95V3.056L19.761-.016l-5.928 5.87 2.966 2.966 5.866-5.81v25.14L9.971 15.58l2.977-2.947-2.966-2.966z"/>
+        <path d="M17.018 21.333l2.942-2.914v-6L7.402-.016 0 3.05v24.894l7.239 3.072 5.928-5.87-2.966-2.966-5.866 5.81V2.85l12.694 12.57-2.977 2.947 2.966 2.966z"/>
+        <text font-family="Ubuntu-Medium, Ubuntu" font-size="8.5" font-weight="400" letter-spacing="5.9" transform="translate(0 -3)">
+            <tspan x="36" y="34">Develope</tspan> <tspan x="120.974" y="34">r</tspan>
+        </text>
+        <text font-family="PingFangSC-Medium, PingFang SC" font-size="20" font-weight="400" transform="translate(0 -3)">
+            <tspan x="36" y="21">开发者平台</tspan>
+        </text>
+    </g>
+</svg>

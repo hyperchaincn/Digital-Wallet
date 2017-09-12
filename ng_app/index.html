@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>浙大区块链实验室</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/ng-img-crop/compile/minified/ng-img-crop.css" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/src/loading-bar.css">
+    <link rel="stylesheet" href="bower_components/font-awesome-animation/dist/font-awesome-animation.min.css">
+
+    <link href="css/my.css" rel="stylesheet">
+    <!-- Important. For Theming change primary-color variable in main.css  -->
+
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <base href="/" />
+
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/ng-file-upload/ng-file-upload-all.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-base64/angular-base64.min.js"></script>
+    <script type="text/javascript" src="bower_components/ng-img-crop/compile/minified/ng-img-crop.js"></script>
+    <script type="text/javascript" src="bower_components/angular-loading-bar/src/loading-bar.js"></script>
+
+
+
+    <script type="text/javascript" src="js/router.js"></script>
+    <script type="text/javascript" src="js/services.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
+    <script type="text/javascript" src="js/directives.js"></script>
+    <script type="text/javascript" src="js/interceptors.js"></script>
+    <script type="text/javascript" src="js/loginAndRegisterModule.js"></script>
+
+</head>
+
+<body ng-controller="WhiteController">
+    <div class="view-container">
+        <div ng-view class="view-frame"></div>
+    </div>
+</body>
+</html>

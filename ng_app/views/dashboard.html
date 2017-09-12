@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>浙大区块链实验室</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="../css/my.css" rel="stylesheet">
+    <!-- Important. For Theming change primary-color variable in main.css  -->
+
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../bower_components/ng-img-crop/compile/minified/ng-img-crop.css" rel="stylesheet">
+    <link rel="stylesheet" href="../bower_components/angular-loading-bar/src/loading-bar.css">
+    <link rel="stylesheet" href="../bower_components/font-awesome-animation/dist/font-awesome-animation.min.css">
+
+
+    <base href="/" />
+
+    <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="../bower_components/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../bower_components/ng-file-upload/ng-file-upload-all.min.js"></script>
+    <script type="text/javascript" src="../bower_components/angular-base64/angular-base64.min.js"></script>
+    <script type="text/javascript" src="../bower_components/ng-img-crop/compile/minified/ng-img-crop.js"></script>
+    <script type="text/javascript" src="../bower_components/angular-loading-bar/src/loading-bar.js"></script>
+
+
+    <script type="text/javascript" src="../js/router.js"></script>
+    <script type="text/javascript" src="../js/services.js"></script>
+    <script type="text/javascript" src="../js/controllers.js"></script>
+    <script type="text/javascript" src="../js/directives.js"></script>
+    <script type="text/javascript" src="../js/interceptors.js"></script>
+    <script type="text/javascript" src="../js/menu.js"></script>
+
+    <!--     <script type="text/javascript" src="js/util/file.js"></script>
+-->
+</head>
+
+<body ng-controller="DashboardController">
+
+<!-- Header Start -->
+<header>
+<a href="#" class="logo"> 
+    <!-- <i class="logo fa fa-gg"></i> -->
+    <img src="../img/group-logo.svg" width="136px" height="36px" alt="Logo"/>
+</a>
+     <span style="font-size: 18px; color: #ffffff;margin-left:80px;">[电子钱包]</span>
+<div class = "pull-right" style="color: white;">
+    <a href="#" style="color: #ffffff;font-size: 14px;" ng-click="signOut()">
+        <!--<i class="fa fa-sign-out"></i>-->
+        <img src="../img/group.svg" width="30px" height="30px"/>
+    <span>{{account.phone}}</span>
+    </a>
+</div>
+</header>
+
+<!-- Header End -->
+
+<div class="dashboard-container">
+<div class="container">
+
+    <nav class="navbar" role="navigation" id="cssmenu">
+        <ul class="nav">
+            <li ng-class="{active:$route.current.activetab=='asset'}" id="asset">
+                <a href='/asset/create'>
+                    <!--<i class="fa fa-arrow-circle-right"></i>-->
+                    <!--<img src="../img/combined-shape.svg" >-->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 23">
+                        <path class="transaction" fill="#525B63" fill-rule="nonzero" d="M17 11v2h4v2h-4v4h-2v-4h-4v-2h4v-2h-4V9h3.586l-3.414-3.414 1.414-1.414L16 7.586l3.414-3.414 1.414 1.414L17.414 9H21v2h-4zM0 0h32v23H0V0zm2 21h28V2H2v19z"/>
+                    </svg>
+                    资产
+                </a>
+            </li>
+            <li ng-class="{active:$route.current.activetab=='transaction'}" id="trx">
+                <a href="/transfer">
+                    <!--<i class="fa fa-exchange"></i>-->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" >
+                        <path class="transaction" fill="#525B63" fill-rule="nonzero" d="M18.385 15H5.5v-2h12.743l-4.586-4.586L15.07 7l7.071 7.071-.707.707-6.364 6.364-1.414-1.414L18.385 15zM14 28C6.268 28 0 21.732 0 14S6.268 0 14 0s14 6.268 14 14-6.268 14-14 14zm0-2c6.627 0 12-5.373 12-12S20.627 2 14 2 2 7.373 2 14s5.373 12 12 12z"/>
+                    </svg>
+                    交易
+                </a>
+            </li>
+            <li ng-class="{active:$route.current.activetab=='user'}" id="user">
+                <a href='/user'>
+                    <!--<i class="fa fa-user"></i>-->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewBox="0 0 29 28">
+                        <path class="transaction" fill="#545E66" fill-rule="nonzero" d="M25.93 25.13A12.162 12.162 0 0 0 14.152 16a12.162 12.162 0 0 0-11.776 9.13h23.552zM9.667 14.728a8 8 0 1 1 8.765-.067c5.023 1.594 8.874 5.918 9.708 11.318l.178 1.153H-.013l.178-1.153c.822-5.326 4.581-9.607 9.503-11.251zM14 14a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"/>
+                    </svg>
+                    账户
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Top Nar End -->
+
+<!--             <div style="float: right; position: absolute; top: 100px;">
+            <div>
+                <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="alert.close()">{{alert.msg}}</uib-alert>
+            </div>
+        </div> -->
+    <!-- Dashboard Wrapper Start -->
+    <div class="view-container">
+        <div ng-view class="view-frame"></div>
+    </div>
+</div>
+</div>
+
+<!-- Main Contianer Start-->
+<!-- <hello></hello>
+-->
+<!-- <div class="dashboard-container" ng-controller="MyCtrl">
+<h4>Upload on file select</h4>
+<button type="file" ngf-select="uploadFiles($file, $invalidFiles)"
+          accept="image/*" ngf-max-height="1000" ngf-max-size="1MB" ng-model="picFile">Select File</button>
+<br>
+<br>
+File:
+<img ng-show="true" ngf-thumbnail="picFile" class="thumb">
+<div style="font:smaller">
+{{f.name}} {{errFile.name}} {{errFile.$error}} {{errFile.$errorParam}}
+<span class="progress" ng-show="f.progress >
+= 0">
+<div style="width:{{f.progress}}%"  
+               ng-bind="f.progress + '%'"></div>
+</span>
+</div>
+{{errorMsg}}
+</div>
+-->
+<!-- <div class="dashboard-container btn btn-primary btn-upload" upload-button url="/upload" on-success="onSuccess(response)" param="file" data="formData" accept="jpg" required="true">Upload</div>
+-->
+<!-- Main Container End-->
+<!--         <footer>
+<p>© BlueMoon 2013-15</p>
+</footer>
+-->
+</body>
+</html>

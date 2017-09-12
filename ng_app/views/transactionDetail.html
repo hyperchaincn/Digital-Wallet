@@ -1,0 +1,98 @@
+<!-- Sub Nav End -->
+<div class="sub-nav ">
+    <ul>
+        <li class="">
+            <a href="/transfer" class="">转出资产</a>
+        </li>
+        <li class="">
+            <a href="/transaction/list" class="">交易记录</a>
+        </li>
+        <li class="">
+            <a href="/transaction/detail" class="selected">交易详情</a>
+        </li>
+    </ul>
+</div>
+<!-- Sub Nav End -->
+
+<div class="dashboard-wrapper-lg">
+    <div class="row my-row">
+        <div  class="col-md-12">
+            <div class="widget-header">
+                <h2>交易详情</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class = "row my-row">
+        <div class = "col-md-2 ">
+            <span>资产名称</span>
+        </div>
+        <div class = "col-md-2 ">
+            <span>{{trx.asset_name}}</span>
+        </div>
+    </div>
+
+    <div class = "row my-row">
+        <div class = "col-md-2 ">
+            <span>交易hash</span>
+        </div>
+        <div class = "col-md-2 ">
+            <span>{{trx.hash}}</span>
+        </div>
+    </div>
+
+    <div class = "row my-row">
+        <div class = "col-md-2 ">
+            <span>{{trx.type}}数量</span>
+        </div>
+        <div class = "col-md-2 ">
+            <span>{{trx.amount}}</span>
+        </div>
+    </div>
+
+    <div class = "row my-row row-bottom">
+        <div class = "col-md-2 ">
+            <span>交易时间</span>
+        </div>
+        <div class = "col-md-2 ">
+            <span>{{trx.create_time}}</span>
+        </div>
+    </div>
+
+    <div class = "row my-row row-top">
+        <div class = "col-md-2 ">
+            <span>对方帐号</span>
+        </div>
+        <div class = "col-md-2 ">
+            <span>{{trx.other_party.phone}}</span>
+        </div>
+    </div>
+
+    <div class = "row my-row row-bottom">
+        <div class = "col-md-2 ">
+            <span>对方地址</span>
+        </div>
+        <div class = "col-md-2 ">
+            <span>{{trx.other_party.account_addr}}</span>
+        </div>
+    </div>
+
+    <div class = "row my-row row-top">
+        <div class = "col-md-2 ">
+            <span>发行方帐号</span>
+        </div>
+        <div class = "col-md-2 ">
+            <span>{{trx.issuer.phone}}</span>
+        </div>
+    </div>
+
+    <div class = "row my-row">
+        <div class = "col-md-2 ">
+            <span>发行方账户地址</span>
+        </div>
+        <div class = "col-md-2 ">
+            <span>{{trx.issuer.account_addr}}</span>
+        </div>
+    </div>
+
+</div>

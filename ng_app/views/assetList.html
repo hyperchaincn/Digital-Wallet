@@ -1,0 +1,58 @@
+        <!-- Sub Nav End -->        
+        <div class="sub-nav ">
+          <ul>
+
+            <li class="">
+              <a href="/asset/create" class="">创建资产</a>
+            </li>
+            <li class="">
+              <a href="/asset/issue" class="">发行资产</a>
+            </li>
+            <li class="">
+              <a href="/asset/list" class="selected">资产列表</a>
+            </li>
+
+          </ul>
+          <!-- <div class="custom-search hidden-sm hidden-xs">        
+          <input type="text" class="search-query" placeholder="Search here ..."> <i class="fa fa-search"></i>
+        </div>
+        -->
+        </div>
+        <!-- Sub Nav End -->        
+
+        <!-- Dashboard Wrapper Start -->        
+        <div class="dashboard-wrapper-lg">
+
+        <div class = "row my-row" style="padding-top: 20px">
+          <span class = "col-md-1" style="font-size: 16px; padding-top: 6px; width: 10%">资产类型</span>
+          <div class="col-md-2">
+            <select class="form-control" style="border-radius: 0; -webkit-appearance:button" ng-model="selectedType" ng-change="changeType(selectedType);">
+              <option value="all">全部</option>
+              <option value="issue">发行</option>
+              <option value="in">转入</option>
+            </select>
+          </div>
+        </div>
+
+        <table class="table table-striped table-hover table-bordered">
+          <thead>
+            <tr style="background-color: rgba(0, 0, 0, 0.04);">
+              <th class="col-md-2" >资产名称</th>
+              <th>资产数量</th>
+              <th>资产类型</th>
+              <th>创建时间</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="item in items" ng-click="detail(item)">
+              <td>{{item.name}}</td>
+              <td style="text-align: right">{{item.balance}}</td>
+              <td>{{item.type}}</td>
+              <td>{{item.create_time}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <span style="color: #525b63; font-size: 14px">每页{{perPage}}条，共{{numPages}}页</span>
+        <uib-pagination previous-text="上一页" next-text="下一页" total-items="totalItems" num-pages=numPages ng-model="currentPage" ng-change="pageChanged()" items-per-page="perPage"></uib-pagination>
+        </div>

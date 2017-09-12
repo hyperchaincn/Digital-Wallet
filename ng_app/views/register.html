@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="myLoginRegister">
+<head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--     <link rel="shortcut icon" href="img/favicon.ico">
+    -->
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/my.css" rel="stylesheet">
+    <!-- Important. For Theming change primary-color variable in main.css  -->
+
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <base href="/" />
+    <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="../bower_components/angular-route/angular-route.min.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="../js/loginAndRegisterModule.js"></script>
+
+</head>
+<body>
+<!-- Main Container start -->
+  <div class="login-container">
+
+    <div class="container">
+
+      <!-- Row Start -->
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-md-offset-4" style="margin-left: 37.5%;margin-top: -100px">
+          <div class="sign-in-container">
+            <form class="login-wrapper" method="post" name="registerForm" ng-controller="RegisterController" ng-submit="register()">
+              <div class="header">
+                <div class="row">
+                  <div class="col-md-12 col-lg-12">
+                    <h3 style="color: #2a2f33">
+                      注册 <a href="#" class="pull-right"> 
+                      <!-- <i class="logo fa fa-gg"></i> --></a>
+                       </h3>
+                  </div>
+                </div>
+              </div>
+              <div class="content">
+                <div class="form-group" style="margin-bottom: 25px" ng-class="{ 'has-error' : registerForm.phoneNumber.$invalid && !registerForm.phoneNumber.$pristine }">
+                  <label for="userName">手机号</label>
+                  <input type="text" class="form-control" style="border-radius: 0" id="userName" placeholder="手机号" required="required" ng-model="registerFormData.phone" pattern="^1[345678][0-9]{9}$" name="phoneNumber" autofocus>
+                  <div class="help-block" ng-show="registerForm.phoneNumber.$invalid && !registerForm.phoneNumber.$pristine">请填写正确的手机号</div>
+                </div>
+                <div class="form-group" style="margin-bottom: 20px;">
+                  <label for="Password1">密码</label>
+                  <input type="password" class="form-control" style="border-radius: 0" id="Password1" placeholder="密码" required="required" ng-model="registerFormData.password">
+                </div>
+                 <div class="has-error">
+                  <span class="help-block" ng-show="registerError">{{registerError}}</span>
+                </div>
+              </div>
+
+            <div class="actions" style="margin-bottom: 25px;">
+              <input class="btn btn-lg blue-btn" name="Register" type="submit" value="注册" ng-disabled="registerForm.$invalid">
+                <a class="link" style="float:right;" href="/login">已有账号?</a>
+                <div class="clearfix"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Row End -->
+  </div>
+</div>
+<!-- Main Container end -->
+</body>
+</html>

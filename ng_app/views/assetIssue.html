@@ -1,0 +1,54 @@
+<!-- Sub Nav End -->
+<div class="sub-nav ">
+  <ul>
+    <li class="">
+      <a href="/asset/create" class="">创建资产</a>
+    </li>
+    <li class="">
+      <a href="/asset/issue" class="selected">发行资产</a>
+    </li>
+    <li class="">
+      <a href="/asset/list" class="">资产列表</a>
+    </li>
+  </ul>
+  <!-- <div class="custom-search hidden-sm hidden-xs">
+  <input type="text" class="search-query" placeholder="Search here ..."> <i class="fa fa-search"></i>
+</div>
+-->
+</div>
+<!-- Sub Nav End -->
+
+<!-- Dashboard Wrapper Start -->
+<div class="dashboard-wrapper-lg">
+
+<div class="widget">
+
+
+  <div class="widget-body">
+    <form class="form-horizontal no-margin" ng-submit="doIssue()" name="issueForm">
+      <div class="row my-row">
+        <span name="name" class="col-md-1 transaction-title">资产名称</span>
+        <div class="col-md-3">
+          <select class= "form-control" style="border-radius: 0; -webkit-appearance:button" ng-model="issueItem"
+          ng-options="item.name for item in items" ng-change="changeIssueAsset(issueItem)" required></select>
+        </div>
+      </div>
+      <div class="row my-row">
+        <span name="issueAddr" class="col-md-1 transaction-title">资产地址</span>
+        <div class="col-md-3">
+          <input type="text" class="form-control" style="border-radius: 0" id="issueAddr" ng-model='issue.asset_addr' readonly required></div>
+      </div>
+      <div class="row my-row">
+        <span name="issueCount" class="col-md-1 transaction-title">发行数量</span>
+        <div class="col-md-3">
+          <input type="number" class="form-control" style="border-radius: 0" id="issueCount" ng-model='issue.amount' required></div>
+      </div>
+      <div class="row my-row">
+        <div class="col-md-2 col-md-offset-1">
+          <button type="submit" class="btn btn-lg blue-btn" ng-disabled="issueForm.$invalid">发行</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</div>

@@ -1,0 +1,34 @@
+<div class="modal-header">
+  <h3 class="modal-title">修改密码</h3>
+</div>
+
+<form name="changePwdForm" method="post" ng-submit="ok()">
+  <div class="modal-body">
+
+    <div class="form-group">
+      <label>旧密码</label>
+      <input type="password" class="form-control" placeholder="输入旧密码" required="required" ng-model="psw.psw" autofocus>
+      <div class="has-error">
+        <span class="help-block" ng-show="error">{{error}}</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>新密码</label>
+      <input type="password" class="form-control" placeholder="输入新密码" required="required" ng-model="psw.new_psw">
+    </div>
+
+    <div class="form-group">
+      <label>重复新密码</label>
+      <input type="password" class="form-control" placeholder="重复输入新密码" required="required" ng-model="repeat_psw">
+      <div class="has-error">
+        <span class="help-block" ng-show="repeat_error">{{repeat_error}}</span>
+      </div>
+    </div>
+
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" style="float: left;" type="button" ng-click="close()" >取消</button>
+    <button class="btn btn-primary" type="button" ng-click="ok()" ng-disabled="changePwdForm.$invalid">确定</button>
+  </div>
+</form>

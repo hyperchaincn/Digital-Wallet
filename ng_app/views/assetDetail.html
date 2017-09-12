@@ -1,0 +1,113 @@
+ <!--Sub Nav End -->
+<div class="sub-nav">
+    <ul>
+        <li class="">
+            <a href="/asset/create" class="">创建资产</a>
+        </li>
+        <li class="">
+            <a href="/asset/issue" class="">发行资产</a>
+        </li>
+        <li class="">
+            <a href="/asset/list" class="">资产列表</a>
+        </li>
+        <li class="">
+            <a href="/asset/detail" class="selected">资产详情</a>
+        </li>
+    </ul>
+</div>
+<!-- Sub Nav End -->
+
+<div class="dashboard-wrapper-lg">
+
+    <!-- <div class="widget">
+    -->
+    <div class="row my-row">
+        <div  class="col-md-12" style="padding-left: 28px;">
+            <div class="widget-header">
+                <h2>资产详情</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="widget-body"> -->
+        <div class = "row my-row">
+            <div class = "col-md-2 " style="width: 13%; padding-left: 28px;">
+                <span>资产名称</span>
+            </div>
+            <div class = "col-md-4 ">
+                <span>{{asset.name}}</span>
+            </div>
+        </div>
+
+        <div class = "row my-row">
+            <div class = "col-md-2 " style="width: 13%; padding-left: 28px;">
+                <span>资产类型</span>
+            </div>
+            <div class = "col-md-4 ">
+                <span>{{asset.type}}</span>
+            </div>
+        </div>
+
+        <div class = "row my-row" ng-show="asset.type == '发行'">
+            <div class = "col-md-2 " style="width: 13%; padding-left: 28px;">
+                <span>资产发行总数量</span>
+            </div>
+            <div class = "col-md-4 ">
+                <span>{{asset.amount}}</span>
+            </div>
+        </div>
+
+        <div class = "row my-row">
+            <div class = "col-md-2 " style="width: 13%; padding-left: 28px;">
+                <span>资产余额</span>
+            </div>
+            <div class = "col-md-4 ">
+                <span>{{asset.balance}}</span>
+            </div>
+        </div>
+
+        <div class = "row my-row">
+            <div class = "col-md-2 " style="width: 13%; padding-left: 28px;">
+                <span>资产地址</span>
+            </div>
+            <div class = "col-md-4 ">
+                <span>{{asset.asset_addr}}</span>
+            </div>
+        </div>
+
+        <div class = "row my-row">
+            <div class = "col-md-2 " style="width: 13%; padding-left: 28px;">
+                <span>发行方账户地址</span>
+            </div>
+            <div class = "col-md-4 ">
+                <span>{{asset.account_addr}}</span>
+            </div>
+        </div>
+
+        <div class = "row my-row">
+            <div class = "col-md-2 " style="width: 13%; padding-left: 28px;">
+                <span>资产单位</span>
+            </div>
+            <div class = "col-md-4 ">
+                <span>{{asset.unit}}</span>
+            </div>
+        </div>
+
+        <div class = "row my-row">
+            <div class = "col-md-2 " style="width: 13%; padding-left: 28px;">
+                <span>资产描述</span>
+            </div>
+            <div class = "col-md-4 ">
+                <span>{{asset.description}}</span>
+            </div>
+        </div>
+
+        <div class = "row my-row">
+            <div class = "col-md-2 " style="width: 13%; padding-left: 28px;">
+                <span>资产创建时间</span>
+            </div>
+            <div class = "col-md-4 ">
+                <span>{{asset.create_time}}</span>
+            </div>
+        </div>
+    </div>

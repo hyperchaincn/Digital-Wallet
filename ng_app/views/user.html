@@ -1,0 +1,69 @@
+        <!-- Sub Nav End -->        
+        <div class="sub-nav">
+          <ul>
+            <li>
+              <a href="" class="heading">账户信息</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Sub Nav End -->        
+
+        <!-- Dashboard Wrapper Start -->        
+        <div class="dashboard-wrapper-lg" style="box-shadow: inset 0 0 0 0 rgba(0,0,0,0); padding: 1px 72px 40px 72px">
+
+          <div class="row my-row">
+            <div class="col-lg-2 col-md-2">
+              <h2>基本信息</h2>
+            </div>
+          </div>
+          <div class="row my-row">
+            <div class="col-lg-2 col-md-2">
+              <span>帐号</span>
+            </div>
+            <div class="col-lg-2 col-md-2">
+              <span>{{user.account}}</span>
+            </div>
+          </div>
+          <div class="row my-row">
+            <div class="col-lg-2 col-md-2">
+              <span>地址</span>
+            </div>
+            <div class="col-lg-2 col-md-2">
+              <span>{{user.address}}</span>
+            </div>
+          </div>
+          <div class="row my-row row-bottom">
+            <div class="col-lg-2 col-md-2">
+              <span>帐号创建时间</span>
+            </div>
+            <div class="col-lg-2 col-md-2">
+              <span>{{user.time}}</span>
+            </div>
+          </div>
+
+          <div class="row my-row">
+            <div class="col-lg-2 col-md-2">
+              <h2>安全信息</h2>
+            </div>
+          </div>
+          <!-- <div class="row my-row">
+            <div class="col-lg-2 col-md-2" style="padding-top: 15px;">
+              <span>密钥</span>
+            </div>
+            <div class="col-lg-2 col-md-2">
+              <button type="button" class="btn btn-danger btn-md" ng-click="open('sm')">查看</button>
+            </div>
+            <div class="col-lg-6 col-md-6" style="padding-top: 15px;">
+              <span>{{user.key}}</span>
+            </div>
+          </div> -->
+          <div class="row my-row">
+            <div class="col-lg-2 col-md-2" style="padding-top: 15px;">
+              <span>密码</span>
+            </div>
+            <div class="col-lg-2 col-md-2">
+              <button type="button" class="btn btn-danger btn-md" ng-click="changePwd()">修改</button>
+            </div>
+          </div>
+
+        </div>

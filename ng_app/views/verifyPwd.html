@@ -1,0 +1,20 @@
+<div class="modal-header"">
+  <h3 class="modal-title">{{title}}</h3>
+</div>
+
+<form name="checkKeyForm" method="post" ng-submit="ok()">
+  <div class="modal-body">
+    <div class="form-group" ng-hide="disappear">
+      <label>密码</label>
+      <input type="password" class="form-control" style="border-radius: 0; -webkit-appearance:button" placeholder="输入登录密码" required="required" ng-model="psw" autofocus></div>
+    <div ng-show="disappear==true && !error" id="loading-bar-container"></div>
+    <div class="has-error">
+      <span class="help-block" ng-show="error">{{error}}</span>
+    </div>
+
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" style="float: left;" type="button" ng-click="close()" >取消</button>
+    <button class="btn btn-primary" type="button" ng-click="ok()" ng-disabled="checkKeyForm.$invalid">确定</button>
+  </div>
+</form>

@@ -1,0 +1,58 @@
+<!-- Sub Nav End -->
+<div class="sub-nav ">
+  <ul>
+    <li class="">
+      <a href="/transfer" class="selected">转出资产</a>
+    </li>
+    <li class="">
+      <a href="/transaction/list" class="">交易记录</a>
+    </li>
+  </ul>
+</div>
+<!-- Sub Nav End -->
+
+<!-- Dashboard Wrapper Start -->
+<div class="dashboard-wrapper-lg">
+
+  <div class="widget">
+
+    <div class="widget-body">
+      <form class="form-horizontal no-margin" ng-submit="transfer()" name="transferForm">
+        <div class="row my-row">
+          <span name="name" class="col-md-1 transaction-title">资产名称</span>
+          <div class="col-md-3">
+            <!-- disable when asset.amount==0 group by asset.type -->
+            <select class= "form-control" style="border-radius: 0; -webkit-appearance:button" ng-model="issueItem" ng-options="asset.name group by asset.type disable when asset.amount==0  for asset in assets" ng-change="changeAsset(issueItem)" ng-blur="setBalance(issueItem)"></select>
+          </div>
+        </div>
+        <div class="row my-row">
+          <span name="transferAddr" class="col-md-1 transaction-title">资产地址</span>
+          <div class="col-md-3">
+            <input type="text" class="form-control" style="border-radius: 0" id="transferAddr" ng-model='trx.asset_addr' readonly required></div>
+        </div>
+        <div class="row my-row">
+          <span name="transferTo" class="col-md-1 transaction-title">对方地址</span>
+          <div class="col-md-3">
+            <input type="text" class="form-control" style="border-radius: 0" id="transferTo" ng-model='trx.to' required></div>
+        </div>
+        <div class="row my-row">
+          <span name="transferCount" class="col-md-1 transaction-title">资产数量</span>
+          <div class="col-md-3">
+            <input type="number" class="form-control" style="border-radius: 0" id="transferCount" ng-model='trx.amount' required min="0">
+            <div class="has-error">
+              <span class="help-block" ng-show="balanceError">{{balanceError}}</span>
+            </div>
+          </div>
+          <div class="col-md-3 has-error" ng-show="balance">
+            <span class="help-block">资产余额为{{balance}}</span>
+          </div>
+        </div>
+        <div class="row my-row">
+          <div class="col-md-2 col-md-offset-1">
+            <button type="submit" class="blue-btn btn btn-lg" ng-disabled="transferForm.$invalid">转出</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

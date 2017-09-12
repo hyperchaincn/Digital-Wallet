@@ -1,0 +1,108 @@
+<!-- Sub Nav End -->
+<div class="sub-nav">
+  <ul>
+    <li class="">
+      <a href="/asset/create" class="selected">创建资产</a>
+    </li>
+    <li class="">
+      <a href="/asset/issue" class="">发行资产</a>
+    </li>
+    <li class="">
+      <a href="/asset/list" class="">资产列表</a>
+    </li>
+  </ul>
+</div>
+<!-- Sub Nav End -->
+
+<!-- Dashboard Wrapper Start -->
+<div class="dashboard-wrapper-lg">
+
+  <div class="widget">
+
+
+    <div class="widget-body">
+      <form class="form-horizontal no-margin" ng-submit="create(croppedDataUrl, logo.name)" name="assetForm">
+        <div class="row my-row">
+          <span name="assetName" class="col-md-1 transaction-title">资产名称</span>
+          <div class="col-md-3">
+            <input type="text" class="form-control" style="border-radius: 0" id="assetName" ng-model='asset.name' required maxlength="10"></div>
+        </div>
+        <div class="row my-row">
+          <div class="col-md-2 col-md-offset-1 asset-hint" style="margin-top: -22px;">
+            <span>不超过10个字符</span>
+          </div>
+        </div>
+        <!-- <div class="row my-row">
+        <span name="assetCount" class="col-md-1">资产数量</span>
+        <div class="col-md-3">
+          <input type="number" class="form-control" id="assetCount" ng-model='asset.count' required></div>
+        <div class="col-md-3 asset-hint">
+          <span>每笔最大支持千万(10000000)</span>
+        </div>
+      </div>
+      -->
+      <div class="row my-row">
+        <span name="assetUnit" class="col-md-1 transaction-title">资产单位</span>
+        <div class="col-md-3">
+          <input type="text" class="form-control"  style="border-radius: 0" id="assetUnit" ng-model='asset.unit' required maxlength="5"></div>
+      </div>
+        <div class="row my-row">
+          <div class="col-md-2 col-md-offset-1 asset-hint" style="margin-top: -22px;">
+            <span>不超过5个字符</span>
+          </div>
+        </div>
+
+      <div class="row my-row">
+        <span name="assetDescription" class="col-md-1 transaction-title" required>资产描述</span>
+        <div class="col-md-8">
+          <textarea id="assetDescription" class="form-control" style="border-radius: 0" rows="6" ng-model='asset.description' style="resize: none;"></textarea>
+        </div>
+      </div>
+
+
+      <!--                 <button type="file" name="logo" class="btn btn-info" ngf-select accept="image/*" ngf-max-height="50" ngf-max-width="50" ngf-resize="{width: 50, height: 50}" ngf-max-size="200KB" ng-model="asset.logo">选择图片</button>
+    -->
+<!--     <div class="form-pic row my-row">
+      <span name="assetLogo" class="col-md-1">资产标志</span>
+      <div class ="col-md-1">
+        <button class="btn btn-info" ngf-select ng-model="logo" accept="image/*" ng-click="selectImg()">选择图片</button>
+      </div>
+
+      <div class="col-md-1">
+        <img ng-src="{{croppedDataUrl}}" ng-model="asset.logo"></div>
+
+    </div>
+
+    <div ng-show="logo && !cropped" class="cropDiv">
+      <div ngf-drop ng-model="logo" ngf-pattern="image/*" class="cropArea">
+        <img-crop image="logo | ngfDataUrl" result-image="croppedDataUrl" result-image-size="48" ng-init="croppedDataUrl=''"></img-crop>
+    </div>
+    <button ngf-select ng-model="logo" accept="image/*" class="btn btn-danger btn-sm">重新选择</button>
+    <button type="button" class="btn btn-danger btn-sm" style="float: right" ng-click="cropped=true">确定</button>
+  </div> -->
+
+  <!-- 
+    <div class="col-md-2 has-error">
+  <span ng-show = "assetForm.logo.$invalid" class="help-block">图片不符合规格</span>
+  <img ng-show="assetForm.logo.$valid" ngf-thumbnail="asset.logo" class="thumb"></div>
+</div>
+-->
+<!-- <div class="col-md-3 asset-hint">
+-->
+<!--       <span>
+大小
+<200K</span>
+<br>
+<span>尺寸50*50</span>
+-->
+<!-- </div>
+-->
+<div class="row my-row">
+  <div class="col-md-2 col-md-offset-1">
+    <button type="submit" class="btn btn-lg blue-btn" ng-disabled="assetForm.$invalid">创建</button>
+  </div>
+</div>
+</form>
+</div>
+</div>
+</div>
