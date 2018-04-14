@@ -2,6 +2,16 @@
 ---
 本文将介绍区块链的使用，以帮助读者理解资产创建、发行、交易的整个流程。
 ## 准备
+
+获取代码
+`git clone https://github.com/hyperchaincn/Digital-Wallet.git`
+
+配置开发者平台账号信息
+* [注册](https://dev.hyperchain.cn)趣链科技开发者平台账号
+* 登陆后创建应用
+* 进入应用详情，获取AppKey、AppSecret
+* 编辑项目目录下`blockchain_lib/conf.js`文件，将AppKey、AppSecret以及账号和密码替换至相应位置
+
 配置数据库
 * 下载并安装mongodb  
 * [mongodb安装地址](https://www.mongodb.com/download-center#community) 
@@ -13,6 +23,8 @@
 * [bower安装地址](https://bower.io/)
 * 安装依赖并启动 `npm start`
 * 端口访问 `localhost:3000`
+
+
 
 ---
 ## 简介
