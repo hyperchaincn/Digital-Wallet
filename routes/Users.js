@@ -11,8 +11,19 @@ var crypto = require('crypto');
 var ethereumUtil = require('ethereumjs-util');
 var secp256k1 = require('secp256k1');
 var GETH_URL = require('../help_utils/geth_level_utils').BASE_URL;
+var bcconf = require('../blockchain_lib/conf')
 
-
+var options = { 
+    method: 'POST',
+    url: 'https://api.hyperchain.cn/v1/token/gtoken',
+    formData:
+    {
+        client_id: bcconf.client_id,
+        client_secret: bcconf.client_secret,
+        phone: bcconf.phone,
+        password: bcconf.password
+    }
+};
 
 router.post('/user', function (req, res) {
     console.log(typeof req.body);
@@ -47,18 +58,6 @@ router.post('/user', function (req, res) {
             "password":  password,
             "create_time": new Date
         });
-
-
-
-     var options = { method: 'POST',
-       url: 'https://api.hyperchain.cn/v1/token/gtoken',
-       formData:
-        { client_id: 'dd7314bb-e48f-43bd-a0cc-11ebcb977d49',
-          client_secret: '1108M45t16X2F399706f9p12cv10Pq3H',
-          username: '17612156863',
-          password: 'tajnzh10' } };
-
-
 
         request(options, function (error, response, body) {
             if (error) throw new Error(error);
