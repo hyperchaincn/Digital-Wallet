@@ -19,8 +19,8 @@ var authToken = require('./models/Users').authToken;
 var app = express();
 
 //connect to database
-//mongoose.connect('mongodb://127.0.0.1/blockchain');
-mongoose.connect('mongodb://118.31.187.17/blockchain');
+mongoose.connect('mongodb://127.0.0.1/blockchain');
+//mongoose.connect('mongodb://118.31.187.17/blockchain');
 //mongoose.connect('mongodb://139.129.44.55/blockchain');
 // view engine setup
 app.set('views', path.join(__dirname, 'ng_app'));
@@ -33,6 +33,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'ng_app')));
+app.use(express.static(path.join(__dirname, '')));
 
 // We are going to protect /api routes with JWT
 app.use('/',token);
